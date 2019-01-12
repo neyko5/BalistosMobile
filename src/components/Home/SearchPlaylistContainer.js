@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
-    zIndex: 2
+    zIndex: 20,
+    position: 'absolute'
   },
   searchIcon: {
     width: 54,
@@ -78,7 +79,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#000000',
     borderStyle: 'solid',
-    lineHeight: 36,
     backgroundColor: '#f7f9f9',
     height: 36,
     paddingHorizontal: 10,

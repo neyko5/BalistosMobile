@@ -84,6 +84,7 @@ class VideoPlayer extends React.Component {
     });
   }
   onPlayerStateChange(event) {
+    console.log("ELAPSED", event);
     if (event.state && event.state === 'unstarted') {
       this.props.finishVideo(this.props.current.id);
     }
@@ -104,6 +105,7 @@ class VideoPlayer extends React.Component {
     /* this.state.player.pauseVideo(); */
   }
   updateElapsed(event) {
+    console.log("ELAPSED", event);
     this.setState({
       elapsed: event.currentTime,
       total: event.duration,

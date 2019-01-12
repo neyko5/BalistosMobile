@@ -81,10 +81,14 @@ export function* fetchPopularPlaylists() {
 }
 
 export function* searchPlaylists(action) {
-  try {
-    const response = yield axios.get(`/playlists/search?q=${action.query}`);
-    yield put({ type: actionTypes.SET_PLAYLIST_RESULTS, results: response.data });
-  } catch (error) {}
+  if (!action.query) { 
+    yield put({type: actionTypes.SET_PLAYLIST_RESULTS, results: []});
+  } else {
+    try {
+      const response = yield axios.get(`/playlists/search?q=${action.query}`);
+      yield put({ type: actionTypes.SET_PLAYLIST_RESULTS, results: response.data });
+    } catch (error) {}
+  }
 }
 
 export function* createPlaylist(action) {

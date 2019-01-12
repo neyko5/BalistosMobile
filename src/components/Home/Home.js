@@ -6,9 +6,10 @@ import { View, Text, StyleSheet } from 'react-native';
 const Home = () => (
   <View>
     <Text style={styles.mainTitle}>Share your music taste with your friends!</Text>
-    <SearchPlaylistContainer />
+    
     <Text style={styles.subTitle}>Popular playlists</Text>
     <PopularPlaylistContainer />
+    <SearchPlaylistContainer style={styles.searchPlaylist} />
   </View>
 );
 
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 16,
     paddingVertical: 8,
-  },
+  }
 });
   
 
