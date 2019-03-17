@@ -9,7 +9,7 @@ const PopularPlaylist = props => (
       <Text style={styles.place}>{props.index + 1}</Text>
       <View style={styles.square}>
         <Text style={styles.title}>{props.data.title}</Text>
-        <Text style={styles.created}>created by {props.data.username}</Text>
+        <Text style={styles.created}>creatsed by {props.data.username}</Text>
       </View>
     </View>
   </Link>
